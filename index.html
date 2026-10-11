@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier | Fashion Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="logo">Atelier</h1>
+    <nav>
+      <a href="#collections">Collections</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">Autumn / Winter Collection</p>
+    <h2>Designs made to be worn</h2>
+    <p>Original fashion design, shaped by texture, silhouette and quiet detail.</p>
+    <a href="#collections" class="btn">View Collections</a>
+  </section>
+
+  <section id="collections" class="collections">
+    <h2>Collections</h2>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="dresses">Dresses</button>
+      <button class="filter-btn" data-filter="tops">Tops</button>
+      <button class="filter-btn" data-filter="outerwear">Outerwear</button>
+    </div>
+    <div class="grid" id="product-grid">
+      <!-- Filled by script.js -->
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About the Designer</h2>
+    <img src="images/about-sketch.svg" alt="Sketchbook page with a dress design drawing">
+    <p>Write a short story about your design philosophy, inspirations, and background here.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your name" required>
+      <input type="email" id="email" placeholder="Your email" required>
+      <textarea id="message" placeholder="Your message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send</button>
+      <p id="form-status"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Atelier. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

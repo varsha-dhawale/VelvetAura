@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Linen button shirt illustration">
+  <rect width="400" height="500" fill="#e6ebec"/>
+  <path d="M150 80 L110 110 L62 170 L96 210 L124 192 L124 420 L276 420 L276 192 L304 210 L338 170 L290 110 L250 80 Q200 118 150 80 Z" fill="#f7f7f4" stroke="#9aa6aa" stroke-width="2"/>
+  <path d="M150 80 Q200 118 200 150 Q200 118 250 80" fill="none" stroke="#9aa6aa" stroke-width="2"/>
+  <line x1="200" y1="150" x2="200" y2="420" stroke="#9aa6aa" stroke-width="2"/>
+  <circle cx="200" cy="200" r="5" fill="#6d7a7e"/>
+  <circle cx="200" cy="250" r="5" fill="#6d7a7e"/>
+  <circle cx="200" cy="300" r="5" fill="#6d7a7e"/>
+  <circle cx="200" cy="350" r="5" fill="#6d7a7e"/>
+</svg>

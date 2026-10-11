@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Silk wrap dress illustration">
+  <rect width="400" height="500" fill="#efe6df"/>
+  <path d="M168 70 Q200 90 232 70 L244 110 L150 110 Z" fill="#c9a9a0"/>
+  <path d="M176 110 L224 110 L262 200 L300 420 L100 420 L138 200 Z" fill="#c9a9a0"/>
+  <path d="M200 150 L262 200 L300 420 L200 420 Z" fill="#b89089" opacity="0.6"/>
+  <path d="M138 200 Q200 230 262 200" fill="none" stroke="#8f6a63" stroke-width="3"/>
+  <path d="M120 420 H280" stroke="#8f6a63" stroke-width="3"/>
+</svg>

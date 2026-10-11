@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Wool trench coat illustration">
+  <rect width="400" height="500" fill="#ddd5c8"/>
+  <path d="M160 70 L120 90 L56 430 L344 430 L280 90 L240 70 Q200 98 160 70 Z" fill="#b3a28a" stroke="#7d6e5b" stroke-width="2"/>
+  <path d="M160 70 L186 150 L172 210 Z" fill="#9c8c76"/>
+  <path d="M240 70 L214 150 L228 210 Z" fill="#9c8c76"/>
+  <line x1="200" y1="150" x2="200" y2="430" stroke="#7d6e5b" stroke-width="2"/>
+  <path d="M84 300 H316" stroke="#7d6e5b" stroke-width="5"/>
+  <circle cx="200" cy="200" r="4" fill="#5b5043"/>
+  <circle cx="200" cy="360" r="4" fill="#5b5043"/>
+</svg>
