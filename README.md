@@ -20,5 +20,5 @@ Then visit http://localhost:8765.
 Needs Node.js 18 or newer. From the repo root:
 
 ```
-node --test tests/
+node --test
 ```
