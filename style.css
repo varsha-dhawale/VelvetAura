@@ -207,30 +207,6 @@ section h2 {
   color: var(--gold);
 }
 
-/* About */
-.about {
-  background: var(--white);
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.about img {
-  width: 100%;
-  max-width: 560px;
-  height: auto;
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-.about p {
-  font-family: var(--serif);
-  font-size: 1.4rem;
-  font-style: italic;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
 /* Contact */
 .contact {
   background: var(--blush);
