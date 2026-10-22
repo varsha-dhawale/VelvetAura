@@ -3,7 +3,7 @@ Repo for my fashion website
 
 ## Brand
 
-The site's brand name is **Maison Norr**. It appears in the page title, the header logo and the footer.
+The site's brand name is **Maison Nor**. It appears in the page title, the header logo and the footer.
 
 ## Run
 

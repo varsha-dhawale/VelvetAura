@@ -8,6 +8,7 @@ const thisFile = fileURLToPath(import.meta.url);
 const repoRoot = join(dirname(thisFile), "..");
 const skippedDirs = new Set([".git", "node_modules", ".review"]);
 const oldBrand = /atelier/i;
+const previousBrand = /maison norr/i;
 
 function walk(dir) {
   const paths = [];
@@ -49,31 +50,48 @@ test('no file or folder name contains "atelier"', () => {
   assert.deepEqual(bad, [], `paths still named after old brand: ${bad.join(", ")}`);
 });
 
-test("page title uses Maison Norr", () => {
+test('no file contains the old brand name "Maison Norr"', () => {
+  const textFiles = walk(repoRoot)
+    .filter(({ path, isDirectory }) => !isDirectory && path !== thisFile)
+    .map(({ path }) => path);
+  const hits = [];
+  for (const file of textFiles) {
+    readFileSync(file, "utf8")
+      .split("\n")
+      .forEach((line, i) => {
+        if (previousBrand.test(line)) {
+          hits.push(`${relative(repoRoot, file)}:${i + 1}: ${line.trim()}`);
+        }
+      });
+  }
+  assert.deepEqual(hits, [], `previous brand name found:\n${hits.join("\n")}`);
+});
+
+test("page title uses Maison Nor", () => {
   assert.ok(
-    readRepoFile("index.html").includes("<title>Maison Norr | Fashion Design</title>"),
-    "index.html <title> is not 'Maison Norr | Fashion Design'",
+    readRepoFile("index.html").includes("<title>Maison Nor | Fashion Design</title>"),
+    "index.html <title> is not 'Maison Nor | Fashion Design'",
   );
 });
 
-test("header logo shows Maison Norr", () => {
+test("header logo shows Maison Nor", () => {
   assert.ok(
-    readRepoFile("index.html").includes('<h1 class="logo">Maison Norr</h1>'),
-    "index.html header logo is not 'Maison Norr'",
+    readRepoFile("index.html").includes('<h1 class="logo">Maison Nor</h1>'),
+    "index.html header logo is not 'Maison Nor'",
   );
 });
 
-test("footer copyright names Maison Norr", () => {
+test("footer copyright names Maison Nor", () => {
   assert.ok(
-    readRepoFile("index.html").includes("&copy; 2026 Maison Norr."),
-    "index.html footer copyright does not name Maison Norr",
+    readRepoFile("index.html").includes("&copy; 2026 Maison Nor."),
+    "index.html footer copyright does not name Maison Nor",
   );
 });
 
-test("stylesheet header comment names Maison Norr", () => {
+test("stylesheet header comment names Maison Nor", () => {
   assert.ok(
-    readRepoFile("style.css").startsWith("/* Maison Norr fashion theme"),
-    "style.css does not start with '/* Maison Norr fashion theme'",
+    readRepoFile("style.css").startsWith("/* Maison Nor fashion theme"),
+    "style.css does not start with '/* Maison Nor fashion theme'",
   );
 });
 
