@@ -56,3 +56,35 @@ test("old hero heading 'Designs made to be worn' is no longer in index.html", ()
     "old 'Designs made to be worn' heading is still in the file",
   );
 });
+
+test("hero button reads 'Shop the collection' with original href and class", () => {
+  const content = readRepoFile("index.html");
+  assert.ok(
+    content.includes('<a href="#collections" class="btn">Shop the collection</a>'),
+    "index.html hero button is not '<a href=\"#collections\" class=\"btn\">Shop the collection</a>'",
+  );
+});
+
+test("old hero button text 'View Collections' is no longer in index.html", () => {
+  const content = readRepoFile("index.html");
+  assert.ok(
+    !content.includes("View Collections"),
+    "old 'View Collections' button text is still in the file",
+  );
+});
+
+test("hero button appears after the hero heading and inside the hero section", () => {
+  const content = readRepoFile("index.html");
+  const heroStart = content.indexOf('<section class="hero">');
+  const heroEnd = content.indexOf("</section>", heroStart);
+  const headingIndex = content.indexOf("<h2>Clothes that tell your story</h2>");
+  const buttonIndex = content.indexOf('<a href="#collections" class="btn">Shop the collection</a>');
+  assert.ok(
+    heroStart !== -1 && heroEnd !== -1 && headingIndex !== -1 && buttonIndex !== -1,
+    "hero section, heading or 'Shop the collection' button is missing",
+  );
+  assert.ok(
+    headingIndex < buttonIndex && buttonIndex < heroEnd,
+    "'Shop the collection' button should follow the heading inside the hero section",
+  );
+});
